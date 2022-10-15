@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VendingMechine;
 
 namespace VendingMechinePro
 {
@@ -10,7 +11,7 @@ namespace VendingMechinePro
     {
         static void Main(string[] args)
         {
-            var drinkingMachine = new VendingMechine();
+            var drinkingMachine = new Box();
 
             while (!drinkingMachine.checkTotal())
             {
@@ -18,7 +19,7 @@ namespace VendingMechinePro
                 drinkingMachine.DepositCoin(Convert.ToInt32(Console.ReadLine()));
 
             }
-            drinkingMachine.DisplayDrinkSelection();
+            drinkingMachine.mechine();
             Console.ReadLine();
         }
     }
