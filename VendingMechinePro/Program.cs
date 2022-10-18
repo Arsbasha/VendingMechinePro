@@ -6,7 +6,7 @@ namespace VendingMechine
 {
     public class Box
     {
-        const int cola_drink_price = 1;
+        const int drink_price = 1;
         const double Cost_chip_price = 0.50;
         const double Costcandy_price = 0.65;
         public double Total { get; set; }
