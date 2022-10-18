@@ -6,10 +6,10 @@ namespace VendingMechine
 {
     public class Box
     {
-        const int drink_price = 1;
+        const int cola_drink_price = 1;
         const double Cost_chip_price = 0.50;
         const double Costcandy_price = 0.65;
-        public int Total { get; set; }
+        public double Total { get; set; }
 
         public void mechine()
         {
@@ -21,13 +21,16 @@ namespace VendingMechine
             switch (money)
             {
                 case (1):
-                    Total += 5;
+                    Total += 1;
                     break;
                 case (0.50):
-                    Total += 10;
+                    Total += 0.50;
                     break;
                 case (0.65):
-                    Total += 25;
+                    Total += 0.65;
+                    break;
+                case (100):
+                    Total += 100;
                     break;
                 default:
                     Console.WriteLine("Your entry is Invalid.");
@@ -37,7 +40,7 @@ namespace VendingMechine
 
         public void DisplayDrink()
         {
-            Console.WriteLine(".");
+            Console.WriteLine("");
             Console.WriteLine("Cola");
             Console.WriteLine("Chips");
             Console.WriteLine("Candy");
